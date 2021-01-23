@@ -1,0 +1,19 @@
+name: 'Substring'
+description: 'Substing an input value'
+inputs:
+  value:  # id of input
+    description: 'What to substring'
+    required: true
+  start:
+    description: 'The start position'
+    required: true
+    default: '0'
+  end:
+    description: 'The end position'
+    required: false # value length by default
+outputs:
+  result: 
+    description: 'The substring value'
+runs:
+  using: 'node12'
+  main: 'index.js'
