@@ -16,8 +16,6 @@ If either `start` or `end` is less than `0`, it is treated as if it were `0`.
 
 **Required** What to substring.
 
-## Outputs
-
 ### `start`
 
 **Required** The start position.
@@ -25,6 +23,12 @@ If either `start` or `end` is less than `0`, it is treated as if it were `0`.
 ### `end`
 
 The end position. The `value` string length by default.
+
+## Outputs
+
+### `result`
+
+The resulting substring.
 
 ## Example usage
 
