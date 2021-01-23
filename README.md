@@ -35,5 +35,9 @@ The resulting substring.
 ```yaml
 uses: web3j/substring-action@v1.0
 with:
-  who-to-greet: 'Mona the Octocat'
+  value: 'Mona the Octocat'
+  start: '9'
 ```
+
+Result: `Octocat`
+
