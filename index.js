@@ -3,18 +3,19 @@ const github = require('@actions/github');
 
 try {
   const value = core.getInput('value');
-  const start = core.getInput('start');
-  const end = core.getInput('end');
+  const start = parseInt(core.getInput('start'));
+  var length = core.getInput('length');
 
-  if (end == null || end.length == 0) {
-      end = value.length
+  var result;
+  if (length == null || length.length == 0) {
+    console.log(`Substring '${value}' from position ${start} to end`);
+    result = value.substr(start);
+  } else {
+    console.log(`Substring '${value}' with ${length} chars from position ${start}`);
+    result = value.substr(start, parseInt(length));
   }
 
-  console.log(`Substring '${value}' from ${start} to ${end}`);
-
-  const result = value.substring(start, end)
   core.setOutput("result", result);
-
   console.log(`Substring result: ${result}`);
   
 } catch (error) {
