@@ -13,7 +13,7 @@ inputs:
     required: false # value length by default
 outputs:
   result: 
-    description: 'The substring value'
+    description: 'A new String, containing the extracted part of the text. If length is 0 or negative, an empty string is returned.'
 runs:
   using: 'node12'
   main: 'index.js'
