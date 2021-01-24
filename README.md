@@ -1,14 +1,8 @@
+# Substr Javascript action
 
+The `substr` method extracts parts of a string, beginning at the character at the specified position, and returns the specified characters.
 
-# Substring Javascript action
-
-The `substring` method extracts the characters from a string, between two specified indices, and returns the new sub string.
-
-This method extracts the characters in a string between `start` and `end`, not including `end` itself.
-
-If `start` is greater than `end`, this method will swap the two arguments, meaning `str.substring(1, 4) == str.substring(4, 1)`.
-
-If either `start` or `end` is less than `0`, it is treated as if it were `0`.
+**Tip:** To extract characters from the end of the string, use a negative start number.
 
 ## Inputs
 
@@ -18,22 +12,26 @@ If either `start` or `end` is less than `0`, it is treated as if it were `0`.
 
 ### `start`
 
-**Required** The start position.
+**Required** The position where to start the extraction. First character is at index 0.
 
-### `end`
+ - If `start` is positive and greater than, or equal, to the length of the string, `substr()` returns an empty string.
+ - If `start` is negative, `substr()` uses it as a character index from the end of the string.
+ - If `start` is negative or larger than the length of the string, `start` is set to 0.
 
-The end position. The `value` string length by default.
+### `length`
+
+The number of characters to extract. If omitted, it extracts the rest of the string.
 
 ## Outputs
 
 ### `result`
 
-The resulting substring.
+A new String, containing the extracted part of the text. If length is 0 or negative, an empty string is returned.
 
 ## Example usage
 
 ```yaml
-uses: web3j/substring-action@v1.0
+uses: web3j/substr-action@v2
 with:
   value: 'Mona the Octocat'
   start: '9'

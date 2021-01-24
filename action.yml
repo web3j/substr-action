@@ -1,15 +1,15 @@
 name: 'Substring'
-description: 'Substing an input value'
+description: 'Substring an input value'
 inputs:
   value:  # id of input
     description: 'What to substring'
     required: true
   start:
-    description: 'The start position'
+    description: 'The position where to start the extraction. First character is at index 0.'
     required: true
     default: '0'
-  end:
-    description: 'The end position'
+  length:
+    description: 'The number of characters to extract. If omitted, it extracts the rest of the string.'
     required: false # value length by default
 outputs:
   result: 
