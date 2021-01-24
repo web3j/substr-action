@@ -31,7 +31,7 @@ A new String, containing the extracted part of the text. If length is 0 or negat
 ## Example usage
 
 ```yaml
-uses: web3j/substr-action@v2
+uses: web3j/substr-action@v1.2
 with:
   value: 'Mona the Octocat'
   start: '9'
