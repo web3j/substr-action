@@ -1,3 +1,7 @@
+# Archive Notice
+
+> This project is no longer under active development and has been archived. The repository is kept for historical purposes and read-only access. No further updates or pull requests will be considered.
+
 # Substr Javascript action
 
 The `substr` method extracts parts of a string, beginning at the character at the specified position, and returns the specified characters.
